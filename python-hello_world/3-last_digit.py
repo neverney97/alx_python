@@ -1,7 +1,5 @@
 import random
 number = random.randint(-10000, 10000)
-# YOUR CODE HERE
-
 lastDigitOf = abs(number) % 10
 if lastDigitOf > 5:
     print("Last digit of", number, "is", lastDigitOf, "and is greater than 5")
