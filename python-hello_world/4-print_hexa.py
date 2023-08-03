@@ -1,2 +1,3 @@
+text = "{} = {}"
 for i in range(99):
-    print(i,"=",hex(i))
+    print(text.format(i, hex(i)))
