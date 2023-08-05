@@ -3,5 +3,3 @@ def is_prime(number):
     if (number%i) == 0:
       return False
   return True
-
-print(is_prime(15))
