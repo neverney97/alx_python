@@ -1,5 +1,5 @@
 def validate_password(password):
-    if password.len(8):
+    if len(password) == 8:
         return True
     if password.isupper() == True:
         return True
