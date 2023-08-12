@@ -1,10 +1,14 @@
-# creating a list of the arguments
-if __name__ == "__main__":
-    argv = []
+import sys
 
-    for i, argv in enumerate(argv, start=1):
-        if i == 0:
-            print("0 arguments")
-        else:
-            print("{}: {}".format(i, argv))
-            
+def main():
+    argv = sys.argv[1:]  # Exclude the script name from arguments
+    num_args = len(argv)
+
+    print("Number of argument{}: {}".format("s" if num_args != 1 else "", num_args))
+    print(":")
+    
+    for i, arg in enumerate(argv, start=1):
+        print("{}: {}".format(i, arg))
+
+if __name__ == "__main__":
+    main()
