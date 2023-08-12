@@ -1,8 +1,9 @@
 def safe_print_division(a, b):
     try:
-        if b == 0:
-            result = None
-        result = a / b
+        if b != 0:
+            result = a / b
+        else:
+            result is None
     except ZeroDivisionError:
         pass
     finally:
