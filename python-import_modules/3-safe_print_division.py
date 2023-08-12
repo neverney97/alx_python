@@ -6,3 +6,5 @@ def safe_print_division(a, d):
     finally:
         print("{}: {}".format("Inside result", result))
         print("{} / {} = {}".format(a, b, result))
+
+
