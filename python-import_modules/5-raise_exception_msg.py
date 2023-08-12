@@ -1,4 +1,4 @@
-def raise_exception_msg(message="C is fun"):
+def raise_exception_msg(message):
     raise NameError()
 
     try:
