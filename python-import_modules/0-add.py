@@ -4,7 +4,7 @@ a = 1
 b = 1
 result = a + b
 
-# import the add function from add_0
+# import the add function
 if __name__ == "__main__":
     from add_0 import add
     print("{} + {} = {}".format(a, b, result))
