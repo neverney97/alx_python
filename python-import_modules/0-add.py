@@ -1,7 +1,7 @@
 #!/usr/local/bin/python3
 
 a = 1
-b = 1
+b = 2
 result = a + b
 
 # import the add function
