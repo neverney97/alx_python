@@ -1,10 +1,11 @@
 def safe_print_division(a, d):
     return a/b
 
-result = safe_print_division(a, b)
+a = 10
+b = 2
 
 try:
-    result
+    result = safe_print_division(a, b)
 except ZeroDivisionError:
     print("None")
 finally:
