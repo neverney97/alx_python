@@ -1,3 +1,10 @@
 def square_matrix_simple(matrix=[]):
-    for r in matrix:
-        print(r**2)
+    square_matrix = []
+    
+    for row in matrix:
+        square_row = []
+        for value in row:
+            square_row.append(value ** 2)
+        square_matrix.append(square_row)
+    
+    return square_matrix
