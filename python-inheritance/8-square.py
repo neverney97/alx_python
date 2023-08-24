@@ -48,10 +48,9 @@ class Square(Rectangle):
     This is a class Square that inherits from the class Rectangle.
     """
     def __init__(self, size):
-        self.__size = size
         self.integer_validator("size", size)
+        super().__init__(size, size)
+        self.__size = size
 
-    def area(self):
-        return super().area()
     
     
