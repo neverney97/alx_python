@@ -15,7 +15,7 @@ class BaseMetaClass(type):
         """
         return [attribute for attribute in super().__dir__() if attribute != '__init_subclass__']
 
-class BaseGeometry(metaclass=BaseMetaClass):
+class BaseGeometry:
     """
     The name of the class is as above and it is empty for now.
     """
@@ -24,5 +24,3 @@ class BaseGeometry(metaclass=BaseMetaClass):
         This is a method to remove __init_subclass__ from the dir list.
         """
         return [attribute for attribute in super().__dir__() if attribute != '__init_subclass__']
-    
-print(dir(BaseGeometry))
