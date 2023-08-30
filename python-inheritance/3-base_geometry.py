@@ -12,4 +12,4 @@ class BaseGeometry:
         """
         This is a method to remove __init_subclass__ from the dir list.
         """
-        return [attribute for attribute in super().__dir__() if attribute != '__init_subclass']
+        return [attribute for attribute in super().__dir__() if attribute != '__init_subclass__']
