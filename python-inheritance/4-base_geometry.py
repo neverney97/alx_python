@@ -8,5 +8,11 @@ class BaseGeometry:
     """
     This is the class' name and it has 1 public instance method.
     """
+    def __dir__(cls):
+        """
+        This is a method to remove __init_subclass__ from the dir list.
+        """
+        return [attribute for attribute in super().__dir__() if attribute != '__init_subclass__']
+    
     def area(self):
         raise Exception("area() is not implemented")
