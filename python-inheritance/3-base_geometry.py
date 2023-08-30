@@ -15,7 +15,7 @@ class BaseMetaClass(type):
         """
         return [attribute for attribute in super().__dir__() if attribute != '__init_subclass__']
 
-class BaseGeometry:
+class BaseGeometry(metaclass=BaseMetaClass):
     """
     The name of the class is as above and it is empty for now.
     """
