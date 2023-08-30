@@ -19,7 +19,7 @@ class BaseGeometry(metaclass=BaseMetaClass):
     """
     The name of the class is as above and it is empty for now.
     """
-    def __dir__(BaseGeometry):
+    def __dir__(cls):
         """
         This is a method to remove __init_subclass__ from the dir list.
         """
