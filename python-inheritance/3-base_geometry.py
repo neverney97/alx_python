@@ -8,7 +8,7 @@ class BaseGeometry:
     """
     The name of the class is as above and it is empty for now.
     """
-    def __dir__(cls):
+    def __dir__(BaseGeometry):
         """
         This is a method to remove __init_subclass__ from the dir list.
         """
