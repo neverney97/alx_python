@@ -110,4 +110,4 @@ class Rectangle(Base):
     
     def __str__(self):
         """ This method returns something"""
-        return ("{} ({}) {}/{} - {}/{}".format("[Rectangle]", id, self.x, self.y, self.width, self.height))
+        return ("[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.x, self.y, self.width, self.height))
