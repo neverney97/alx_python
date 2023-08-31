@@ -16,7 +16,7 @@ Why private attributes with getter/setter? Why not directly public attribute?
 Because we want to protect attributes of our class. With a setter, you are able to validate what a developer is trying to assign to a variable. So after, in your class you can “trust” these attributes.
 """
 
-from base import Base
+from models.base import Base
 """ This is an import statement to import the class Base from the base python file
 """
 
