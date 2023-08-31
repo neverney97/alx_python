@@ -114,10 +114,18 @@ class Rectangle(Base):
         """ This method returns something"""
         return ("[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.x, self.y, self.width, self.height))
     
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """ This is a method"""
         if args:
             attrs = ['id', 'width', 'height', 'x', 'y']
             for i, value in enumerate(args):
                 if i < len(attrs):
                     setattr(self, attrs[i], value)
+        else:
+            for key, value in kwargs.items():
+                setattr(self, key, value)
+
+
+    
+
+
