@@ -24,6 +24,19 @@ class Square(Rectangle):
         self.__size = size
         self.__x = x
         self.y = y
+
+    @property
+    def size(self):
+        """Getter for size"""
+        return self.__size
+    
+    @size.setter
+    def size(self, value):
+        """Setter for size"""
+        if not isinstance(value, int):
+            raise TypeError("size must be an integer")
+        if value < 0:
+            raise ValueError("size must be >= 0")
     
     def __str__(self):
         """This method overrides the method in the rectange superclass"""
