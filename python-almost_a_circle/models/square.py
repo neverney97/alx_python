@@ -18,7 +18,7 @@ class Square(Rectangle):
     """This class, Square, inherits from its superclass Rectangle"""
     def __init__(self, size, x=0, y=0, id=None):
         """ This is the __init__ method"""
-        super().__init__(width, height, x, y, id=None)
+        super().__init__(size, size, x, y, id=None)
         self.__height = size
         self.__width = size
         self.__size = size
@@ -27,5 +27,5 @@ class Square(Rectangle):
     
     def __str__(self):
         """This method overrides the method in the rectange superclass"""
-        return ("[Square] ({}) {}/{} - {}".format(self.id, self.x, self.y, self.size))
+        return ("[Square] ({}) {}/{} - {}".format(self.id, self.x, self.y, self.width))
 
