@@ -116,5 +116,5 @@ class Rectangle(Base):
     
     def update(self, *args):
         """ This is a method"""
-        args = (self.id, self.width, self.height, self.x, self.y)
+        args = (id, self.width, self.height, self.x, self.y)
 
