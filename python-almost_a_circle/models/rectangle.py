@@ -114,4 +114,7 @@ class Rectangle(Base):
         """ This method returns something"""
         return ("[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.x, self.y, self.width, self.height))
     
+    def update(self, *args):
+        """ This is a method"""
+        args = (self.id, self.width, self.height, self.x, self.y)
 
