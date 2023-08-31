@@ -18,6 +18,8 @@ Because we want to protect attributes of our class. With a setter, you are able 
 
 from models.base import Base
 """ This is an import statement to import the class Base from the base python file
+
+
 """
 
 class Rectangle(Base):
