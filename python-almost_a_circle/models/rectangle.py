@@ -29,62 +29,58 @@ class Rectangle(Base):
 
     """
     def __init__(self, width, height, x, y, id=None):
+        """
+        Contructor method
+
+
+        """
         super().__init__(id)
         self.__width = width
         self.__height = height
         self.__x = x
         self.__y = y
 
-    """ Getter method for width
-
-    """
+    
     @property
     def width(self):
+        """ Getter for width"""
         return self.__width
     
-    """ Setter method for width
-
-    """
     @width.setter
     def width(self, value):
+        """ Setter for width"""
         self.__width = value
 
-    """ getter method for height
-
-    """
+    
     @property
     def height(self):
+        """getter for height"""
         return self.__height
     
-    """ setter method for height
-
-    """
+    
     @height.setter
     def height(self, value):
+        """Setter for height"""
         self.__height = value
 
-    """ getter method for x
-
-    """
+    @property
     def x(self):
+        """ Getter for x"""
         return self.__x
     
-    """ Setter method for x
-
-    """
+    @x.setter
     def x(self, value):
+        """ Setter for x"""
         self.__x = value
 
-    """Getter method for y
-
-    """
+    @property
     def y(self):
+        """ Getter for y"""
         return self.__y
     
-    """setter method for y
-
-    """
+    @y.setter
     def y(self, value):
+        """ Setter for y"""
         self.__y = value
 
 
