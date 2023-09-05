@@ -16,3 +16,7 @@ request = requests.get("https://alu-intranet.htbn.io/status")
 This fetches the links in the quotes
 
 """
+
+print("Body response:$")
+print("\t- type:", type(request.text))
+print("\t- content:", request.text)
