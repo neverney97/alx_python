@@ -7,17 +7,18 @@ The body of the response must be display like the following example (tabulation 
 """
 # Import the requests package
 import requests
-"""
-This statement imports the requests module
-what does this module or library do? It is a library for making HTTP requests.
-"""
 
-request = requests.get("https://alu-intranet.htbn.io/status")
-"""
-This fetches the links in the quotes
+# Define the URL to fetch data from
+url = 'https://alu-intranet.hbtn.io/status'
 
-"""
+# Send an HTTP GET request to the URL
+response = requests.get(url)
 
-print("Body response:$")
-print("\t- type:", type(request.text))
-print("\t- content:", request.text)
+# Print the response body with appropriate tabulation
+print("Body response:")
+
+# Display the type of the response content
+print("\t- type:", type(response.text))
+
+# Display the content of the response
+print("\t- content:", response.text)
