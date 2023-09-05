@@ -5,6 +5,7 @@ You must use the package requests
 You are not allow to import packages other than requests
 The body of the response must be display like the following example (tabulation before -)
 """
+# Import the requests package
 import requests
 """
 This statement imports the requests module
