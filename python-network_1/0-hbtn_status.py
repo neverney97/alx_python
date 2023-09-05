@@ -7,8 +7,14 @@ The body of the response must be display like the following example (tabulation 
 """
 
 import requests
-"""This statement imports the requests library
+"""
+This statement imports the requests module
+what does this module or library do? It is a library for making HTTP requests.
 
 """
 
 request = requests.get("https://alu-intranet.htbn.io/status")
+"""
+This fetches the links in the quotes
+
+"""
