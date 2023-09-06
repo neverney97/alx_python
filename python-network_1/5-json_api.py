@@ -42,3 +42,4 @@ try:
 except ValueError:
     # Display not a valid JSON result if JSON is invalid
     print("Not a valid JSON")
+    
