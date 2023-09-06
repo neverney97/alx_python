@@ -22,10 +22,6 @@ url = sys.argv[1]
 response = requests.get(url)
 
 # Check if the request was successful
-if response.status_code == 200:
-    # Try to access the 'X-Request-Id' header and display its value
-    x_request_id = response.headers.get('X-Request-Id')
-    if x_request_id:
-        print(x_request_id)
-else:
-    print("Error: Unable to retrieve data from the URL. Status code:", response.status_code)
+x_request_id = response.headers.get('X-Request-Id')
+if x_request_id:
+    print(x_request_id)
