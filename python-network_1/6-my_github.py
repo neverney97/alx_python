@@ -13,18 +13,18 @@ You don’t need to check arguments passed to the script (number or type)
 import requests
 import sys
 
-# Replace 'YOUR_USERNAME' with your GitHub username
-username = 'YOUR_USERNAME'
+# Replace 'YOUR_USERNAME' with your GitHub username (neverney97)
+username = 'neverney97'
 
 # Replace 'YOUR_ACCESS_TOKEN' with your GitHub personal access token
-access_token = 'YOUR_ACCESS_TOKEN'
+access_token = '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'
 
 # Define the API endpoint for the user's information
 url = f'https://api.github.com/users/{username}'
 
 # Create a Basic Authentication header with the access token
 headers = {
-    'Authorization': f'Basic {username}:{access_token}'
+    'Authorization': f'Bearer {access_token}'
 }
 
 # Send a GET request to the GitHub API
@@ -38,3 +38,4 @@ if response.status_code == 200:
     print(f"GitHub User ID: {user_data['id']}")
 else:
     print("Error: Unable to retrieve user information. Status code:", response.status_code)
+
