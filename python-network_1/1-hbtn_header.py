@@ -15,7 +15,7 @@ import sys
 url = 'https://alu-intranet.hbtn.io/status'
 
 # Send an HTTP GET request to the url
-req = requests.get(url)
+res = requests.get(url)
 
 # Checking the value of the variable X-Request-Id
-print(req.headers['X-Request-Id'])
+print(res.headers['X-Request-Id'])
