@@ -27,7 +27,5 @@ if response.status_code == 200:
     x_request_id = response.headers.get('X-Request-Id')
     if x_request_id:
         print(x_request_id)
-    else:
-        print("X-Request-Id header not found in the response.")
 else:
     print("Error: Unable to retrieve data from the URL. Status code:", response.status_code)
