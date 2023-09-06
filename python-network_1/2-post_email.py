@@ -29,6 +29,6 @@ data = {'email': email}
 req = requests.post(url, data=data)
 
 # Print the response
-print(req.text)
+print("Email: {}".format(email))
 
 
