@@ -36,4 +36,6 @@ if response.status_code == 200:
     user_data = response.json()
     #Display the user's ID
     print(f"GitHub User ID: {user_data['id']}")
+else:
+    print("None")
 
