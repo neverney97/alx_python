@@ -37,5 +37,5 @@ if response.status_code == 200:
     # Display the user's ID
     print(f"GitHub User ID: {user_data['id']}")
 else:
-    print("Error: Unable to retrieve user information. Status code:", response.status_code)
+    print("None")
 
