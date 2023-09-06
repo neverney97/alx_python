@@ -13,29 +13,29 @@ You don’t need to check arguments passed to the script (number or type)
 import requests
 import sys
 
-# Replace 'YOUR_USERNAME' with your GitHub username
-username = 'YOUR_USERNAME'
+# Username variable
+username = 'neverney97'
 
-# Replace 'YOUR_ACCESS_TOKEN' with your GitHub personal access token
-access_token = 'YOUR_ACCESS_TOKEN'
+# My Access token
+access_token = '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'
 
-# Define the API endpoint for the user's information
-url = f'https://api.github.com/users/{username}'
+# Define the API endpoint for my information
+url = f'https://api.github.com/users/neverney97'
 
-# Create a Basic Authentication header with the access token
+# Creat a Basic Authentication hedader with the access token
 headers = {
-    'Authorization': f'Basic {username}:{access_token}'
+    'Authorization': f'Basic neverney97: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'
 }
 
-# Send a GET request to the GitHub API
+# Send a GET response to the GitHub API
 response = requests.get(url, headers=headers)
 
-# Check if the request was successful (status code 200)
+# Check if the request was successful
 if response.status_code == 200:
-    # Parse the JSON response
+    # parse the JSON response
     user_data = response.json()
-    # Display the user's ID
+    #Display the user's ID
     print(f"GitHub User ID: {user_data['id']}")
 else:
-    print("Error: Unable to retrieve user information. Status code:", response.status_code)
+    print("None")
 
