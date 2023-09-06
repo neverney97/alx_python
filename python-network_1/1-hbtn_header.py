@@ -7,15 +7,27 @@ The value of this variable is different for each request
 You don’t need to check script arguments (number and type)
 """
 
-# Import the requests and sys packages
 import requests
 import sys
 
-# The url name
-url = 'https://alu-intranet.hbtn.io/status'
+# Check if the URL argument is provided
+if len(sys.argv) != 2:
+    print("Usage: python script.py <URL>")
+    sys.exit(1)
 
-# Send an HTTP GET request to the url
-res = requests.get(url)
+# Get the URL from the command line argument
+url = sys.argv[1]
 
-# Checking the value of the variable X-Request-Id
-print(res.headers['X-Request-Id'])
+# Send an HTTP GET request to the URL
+response = requests.get(url)
+
+# Check if the request was successful
+if response.status_code == 200:
+    # Try to access the 'X-Request-Id' header and display its value
+    x_request_id = response.headers.get('X-Request-Id')
+    if x_request_id:
+        print(x_request_id)
+    else:
+        print("X-Request-Id header not found in the response.")
+else:
+    print("Error: Unable to retrieve data from the URL. Status code:", response.status_code)
