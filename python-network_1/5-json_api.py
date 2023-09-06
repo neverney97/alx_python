@@ -41,4 +41,4 @@ try:
         print("No result")
 except ValueError:
     # Display not a valid JSON result if JSON is invalid
-    print("No result")
+    print("Not a valid JSON")
