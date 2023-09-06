@@ -12,23 +12,25 @@ Please test your script in the container provided, using the web server running 
 import requests
 import sys
 
-# Check if the url and email argument is provided
-if len(sys.argv) != 2:
+# Check if the URL and email arguments are provided
+if len(sys.argv) != 3:
+    print("Usage: python script.py <URL> <email>")
     sys.exit(1)
 
-# Get URL from command line argument
+# Get the URL and email from the command line arguments
 url = sys.argv[1]
-
-# Get email from command line argument
 email = sys.argv[2]
 
 # Create a dictionary with the email parameter
 data = {'email': email}
 
-# Send an HTTP request to the url
-req = requests.post(url, data=data)
+# Send an HTTP POST request to the URL with the email parameter
+response = requests.post(url, data=data)
 
-# Print the response
-print("Email: {}".format(email))
-
+# Check if the request was successful
+if response.status_code == 200:
+    # Display the body of the response
+    print(response.text)
+else:
+    print("Error: Unable to retrieve data from the URL. Status code:", response.status_code)
 
