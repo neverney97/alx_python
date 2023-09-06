@@ -17,13 +17,5 @@ url = 'https://alu-intranet.hbtn.io/status'
 # Send an HTTP GET request to the url
 req = requests.get(url)
 
-# Check if the request was successful
-if req.status_code == 200:
-    # Try to access the 'X-Request-Id' header and display its value
-    x_request_id = req.headers.get('X-Request-Id')
-    if x_request_id:
-        print(x_request_id)
-    else:
-        print("X-Request-Id header not found in the response.")
-else:
-    print("Error: Unable to retrieve data from the URL. Status code:", req.status_code)
+# Checking the value of the variable X-Request-Id
+print(req.headers['X-Request-Id'])
